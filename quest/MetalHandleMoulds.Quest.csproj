@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <AssemblyName>MetalHandleMoulds</AssemblyName>
+    <RootNamespace>MetalHandleMoulds</RootNamespace>
+    <Version>1.0.0</Version>
+    <DefineConstants>QUEST</DefineConstants>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <NoWarn>$(NoWarn);CS0105</NoWarn>
+    <Deterministic>true</Deterministic>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <LemonNet8 Condition="'$(LemonNet8)' == ''">..\lemon\net8</LemonNet8>
+    <LemonProxies Condition="'$(LemonProxies)' == ''">..\lemon\Il2CppAssemblies</LemonProxies>
+    <CrapiQuest Condition="'$(CrapiQuest)' == ''">..\lib\CustomRecipesAPI.dll</CrapiQuest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\src\**\*.cs" />
+    <Compile Include="QuestNames.cs" />
+    <EmbeddedResource Include="..\build\bundle\android\!metalhandlemoulds" LogicalName="MetalHandleMoulds.AssetBundles.!metalhandlemoulds" />
+    <Reference Include="$(CrapiQuest)" Private="false" />
+    <Reference Include="$(LemonNet8)\MelonLoader.dll;$(LemonNet8)\0Harmony.dll;$(LemonNet8)\Il2CppInterop.Runtime.dll;$(LemonNet8)\Il2CppInterop.Common.dll" Private="false" />
+    <Reference Include="$(LemonProxies)\*.dll" Private="false" />
+  </ItemGroup>
+</Project>
