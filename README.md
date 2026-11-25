@@ -17,7 +17,7 @@ Headset, in the headset's Mods folder:
 
 Server: CGNik's own PC `MetalHandleMoulds.dll` v6 and `CustomRecipesAPI.dll` v10, as always. A Quest is never a server, so this build is the player side only.
 
-CGNik recommends Circl-NoE's EnoughIron too, so the handles aren't drawn as iron. That one is not ported.
+CGNik recommends Circl-NoE's EnoughIron too, so the handles aren't drawn as iron. Circl's Quest build of it (1.0.2-Q) is on the download board as Enough Iron!; the server runs Enough Iron 1.0.1.
 
 ## What the player's side does
 
